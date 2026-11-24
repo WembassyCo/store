@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wembassy Store — AI Guides, Templates & Toolkits for Business</title>
+    <meta name="description" content="Practical digital products for small businesses and nonprofits. AI agent setup guides, accessibility audit templates, nonprofit prompt libraries, SOP kits, and more.">
+    <meta name="keywords" content="AI agent setup, accessibility audit, WCAG compliance, nonprofit technology, ChatGPT prompts, business automation, SOP templates">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero */
+        .hero { text-align: center; padding: 60px 20px 40px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; background: linear-gradient(90deg, #00d2ff, #3a7bd5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2em; color: #999; max-width: 600px; margin: 0 auto 30px; }
+        .hero .badge { display: inline-block; background: #1a1a2e; color: #00d2ff; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; margin-bottom: 20px; border: 1px solid #2a2a4e; }
+        
+        /* Products Grid */
+        .products { padding: 40px 0; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
+        .product-card { background: #141414; border: 1px solid #222; border-radius: 12px; padding: 25px; transition: transform 0.2s, border-color 0.2s; }
+        .product-card:hover { transform: translateY(-3px); border-color: #3a7bd5; }
+        .product-card .tag { display: inline-block; font-size: 0.75em; padding: 3px 10px; border-radius: 12px; margin-bottom: 12px; font-weight: 600; }
+        .tag.best-seller { background: #1a3a1a; color: #4ade80; }
+        .tag.new { background: #1a2a4e; color: #00d2ff; }
+        .tag.budget { background: #4e1a2a; color: #ff6b9d; }
+        .tag.premium { background: #4e3a1a; color: #fbbf24; }
+        .product-card h3 { font-size: 1.2em; margin-bottom: 8px; color: #fff; }
+        .product-card .desc { color: #888; font-size: 0.9em; margin-bottom: 15px; min-height: 60px; }
+        .product-card .features { list-style: none; margin-bottom: 20px; }
+        .product-card .features li { font-size: 0.85em; color: #aaa; padding: 3px 0; padding-left: 22px; position: relative; }
+        .product-card .features li::before { content: "✓"; position: absolute; left: 0; color: #4ade80; font-weight: bold; }
+        .product-card .price { font-size: 1.8em; font-weight: 700; color: #00d2ff; margin-bottom: 15px; }
+        .product-card .price .old { text-decoration: line-through; color: #555; font-size: 0.6em; margin-left: 8px; }
+        .btn { display: block; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95em; transition: background 0.2s; }
+        .btn-primary { background: #3a7bd5; color: #fff; }
+        .btn-primary:hover { background: #2c6ab5; }
+        .btn-secondary { background: #222; color: #00d2ff; border: 1px solid #333; }
+        .btn-secondary:hover { background: #2a2a2a; }
+        
+        /* Services Section */
+        .services { padding: 40px 0; border-top: 1px solid #222; }
+        .services h2 { text-align: center; margin-bottom: 30px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .service-card { background: #141414; border: 1px solid #222; border-radius: 12px; padding: 20px; text-align: center; }
+        .service-card h4 { color: #fff; margin-bottom: 8px; }
+        .service-card p { color: #888; font-size: 0.85em; margin-bottom: 15px; }
+        .service-card .price { color: #00d2ff; font-size: 1.4em; font-weight: 700; margin-bottom: 12px; }
+        
+        /* FAQ */
+        .faq { padding: 40px 0; border-top: 1px solid #222; }
+        .faq h2 { text-align: center; margin-bottom: 30px; }
+        .faq-item { background: #141414; border: 1px solid #222; border-radius: 8px; padding: 15px 20px; margin-bottom: 10px; }
+        .faq-item h4 { color: #00d2ff; margin-bottom: 5px; font-size: 0.95em; }
+        .faq-item p { color: #888; font-size: 0.9em; }
+        
+        /* Footer */
+        footer { text-align: center; padding: 30px 0; border-top: 1px solid #222; color: #555; font-size: 0.85em; }
+        footer a { color: #00d2ff; text-decoration: none; }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8em; }
+            .product-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <span class="badge">🚀 Digital Products for Growing Organizations</span>
+        <h1>Wembassy Store</h1>
+        <p>Practical guides, templates, and toolkits that help small businesses and nonprofits work smarter with AI and automation. Instant download. No subscription required.</p>
+    </div>
+</div>
+
+<div class="products">
+    <div class="container">
+        <h2 style="text-align:center;">📦 Digital Products — Instant Download</h2>
+        
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card">
+                <span class="tag best-seller">BEST SELLER</span>
+                <h3>AI Agent Setup Guide for Small Business</h3>
+                <p class="desc">Complete playbook for automating your business with AI agents. Set up email management, social media, customer support, and reporting — all for $0-$40/month.</p>
+                <ul class="features">
+                    <li>30-minute setup instructions</li>
+                    <li>50 ready-to-use prompts</li>
+                    <li>Cost breakdown & ROI calculator</li>
+                    <li>No coding required</li>
+                </ul>
+                <div class="price">$47 <span class="old">$97</span></div>
+                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <span class="tag budget">BUDGET-FRIENDLY</span>
+                <h3>50 ChatGPT Prompts for Nonprofit Operations</h3>
+                <p class="desc">Copy-paste prompts for grant writing, donor relations, board management, marketing, and daily operations. Save 20+ hours per week.</p>
+                <ul class="features">
+                    <li>50 tested prompts across 7 categories</li>
+                    <li>Grant writing & fundraising</li>
+                    <li>Board & governance</li>
+                    <li>Marketing & communications</li>
+                </ul>
+                <div class="price">$27 <span class="old">$47</span></div>
+                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <span class="tag new">NEW</span>
+                <h3>Nonprofit Tech Stack Checklist 2026</h3>
+                <p class="desc">100-point technology audit across 8 critical categories. Score your organization, identify gaps, and get a prioritized action plan.</p>
+                <ul class="features">
+                    <li>100-point assessment</li>
+                    <li>Tool recommendations by budget</li>
+                    <li>Security quick-check guide</li>
+                    <li>Donation page audit checklist</li>
+                </ul>
+                <div class="price">$37</div>
+                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <span class="tag premium">PREMIUM</span>
+                <h3>Business Automation SOP Template Kit</h3>
+                <p class="desc">25 ready-to-customize Standard Operating Procedures covering onboarding, finance, content, support, meetings, and more.</p>
+                <ul class="features">
+                    <li>25 SOP templates</li>
+                    <li>Customize in 10 minutes each</li>
+                    <li>Step-by-step procedures</li>
+                    <li>Quality checkpoints included</li>
+                </ul>
+                <div class="price">$67 <span class="old">$127</span></div>
+                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+            </div>
+            
+            <!-- Product 5: Using EXISTING Stripe link -->
+            <div class="product-card" style="border-color: #4ade80;">
+                <span class="tag best-seller">LIVE — BUY NOW</span>
+                <h3>ADA Compliance Toolkit</h3>
+                <p class="desc">WCAG 2.1 AA accessibility audit template. Conduct professional audits, deliver client-ready reports, and offer audits as a service.</p>
+                <ul class="features">
+                    <li>50-point WCAG 2.1 AA checklist</li>
+                    <li>Automated testing commands</li>
+                    <li>Client-ready report template</li>
+                    <li>Pricing guide for selling audits</li>
+                </ul>
+                <div class="price">$49</div>
+                <a href="https://buy.stripe.com/cNi5kwf2dgSt7eD2ex1gs04" class="btn btn-primary" target="_blank">Buy Now — Instant Access</a>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <span class="tag new">NEW</span>
+                <h3>AI Agent Configuration Library</h3>
+                <p class="desc">20 ready-to-deploy agent configurations for email management, social media, customer support, research, and reporting.</p>
+                <ul class="features">
+                    <li>20 production-ready configs</li>
+                    <li>Works with OpenClaw or CrewAI</li>
+                    <li>Free local model compatible</li>
+                    <li>Safety guardrails included</li>
+                </ul>
+                <div class="price">$57</div>
+                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Subscription Services with EXISTING Stripe Links -->
+<div class="services">
+    <div class="container">
+        <h2>🔧 Subscription Services — Live Now</h2>
+        
+        <div class="service-grid">
+            
+            <div class="service-card" style="border-color: #4ade80;">
+                <h4>Accessibility Monitoring</h4>
+                <p>Automated WCAG compliance monitoring for your website. Get alerts when new accessibility issues appear.</p>
+                <div class="price">$39/mo</div>
+                <a href="https://buy.stripe.com/4gMeV66vH31DeH55qJ1gs03" class="btn btn-primary" target="_blank">Subscribe Now</a>
+            </div>
+            
+            <div class="service-card" style="border-color: #4ade80;">
+                <h4>Website Uptime Monitoring — Standard</h4>
+                <p>5-minute checks, 1 site, email + SMS alerts. Know immediately when your site goes down.</p>
+                <div class="price">$19/mo</div>
+                <a href="https://buy.stripe.com/dRm7sE6vHdGhfL95qJ1gs08" class="btn btn-primary" target="_blank">Subscribe Now</a>
+            </div>
+            
+            <div class="service-card" style="border-color: #4ade80;">
+                <h4>Website Uptime Monitoring — Pro</h4>
+                <p>1-minute checks, 10 sites, custom status page, SSL monitoring. For agencies and multiple properties.</p>
+                <div class="price">$49/mo</div>
+                <a href="https://buy.stripe.com/aFa4gs6vH59LeH5bP71gs09" class="btn btn-primary" target="_blank">Subscribe Now</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+    <div class="container">
+        <h2>❓ Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <h4>What format are the products in?</h4>
+            <p>PDF documents, instantly downloadable after purchase. Some products also include template files (YAML, JSON).</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Do I need technical knowledge to use these?</h4>
+            <p>No. The guides are written for non-technical users. If you can use email and a web browser, you can follow the instructions.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Can I use these for my clients?</h4>
+            <p>Yes. Many products (like the accessibility audit template) are designed to be white-labeled and used with clients.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Is there a money-back guarantee?</h4>
+            <p>Yes — 30-day money-back guarantee on all digital products. If it's not useful, email us for a full refund.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>How do subscription services work?</h4>
+            <p>Subscribe via Stripe. You'll be billed monthly and can cancel anytime from your Stripe customer portal.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Wembassy · <a href="https://wembassy.com">wembassy.com</a> · <a href="mailto:hello@wembassy.com">hello@wembassy.com</a></p>
+        <p style="margin-top:10px;">Wembassy helps businesses and nonprofits leverage AI, automation, and technology to maximize impact.</p>
+    </div>
+</footer>
+
+</body>
+</html>
