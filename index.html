@@ -6,6 +6,8 @@
     <title>Wembassy Store — AI Guides, Templates & Toolkits for Business</title>
     <meta name="description" content="Practical digital products for small businesses and nonprofits. AI agent setup guides, accessibility audit templates, nonprofit prompt libraries, SOP kits, and more.">
     <meta name="keywords" content="AI agent setup, accessibility audit, WCAG compliance, nonprofit technology, ChatGPT prompts, business automation, SOP templates">
+    <!-- Google Search Console verification placeholder -->
+    <meta name="google-site-verification" content="">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
@@ -20,13 +22,14 @@
         /* Products Grid */
         .products { padding: 40px 0; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-top: 30px; }
-        .product-card { background: #141414; border: 1px solid #222; border-radius: 12px; padding: 25px; transition: transform 0.2s, border-color 0.2s; }
+        .product-card { background: #141414; border: 1px solid #222; border-radius: 12px; padding: 25px; transition: transform 30.2s, border-color 0.2s; }
         .product-card:hover { transform: translateY(-3px); border-color: #3a7bd5; }
         .product-card .tag { display: inline-block; font-size: 0.75em; padding: 3px 10px; border-radius: 12px; margin-bottom: 12px; font-weight: 600; }
         .tag.best-seller { background: #1a3a1a; color: #4ade80; }
         .tag.new { background: #1a2a4e; color: #00d2ff; }
         .tag.budget { background: #4e1a2a; color: #ff6b9d; }
         .tag.premium { background: #4e3a1a; color: #fbbf24; }
+        .tag.live { background: #1a3a1a; color: #4ade80; border: 1px solid #2a5a2a; }
         .product-card h3 { font-size: 1.2em; margin-bottom: 8px; color: #fff; }
         .product-card .desc { color: #888; font-size: 0.9em; margin-bottom: 15px; min-height: 60px; }
         .product-card .features { list-style: none; margin-bottom: 20px; }
@@ -37,14 +40,17 @@
         .btn { display: block; text-align: center; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95em; transition: background 0.2s; }
         .btn-primary { background: #3a7bd5; color: #fff; }
         .btn-primary:hover { background: #2c6ab5; }
-        .btn-secondary { background: #222; color: #00d2ff; border: 1px solid #333; }
-        .btn-secondary:hover { background: #2a2a2a; }
+        .btn-live { background: #2a7a2a; color: #fff; }
+        .btn-live:hover { background: #1a6a1a; }
+        .btn-preview { background: transparent; color: #888; border: 1px solid #333; margin-top: 8px; }
+        .btn-preview:hover { background: #1a1a1a; color: #aaa; }
         
         /* Services Section */
         .services { padding: 40px 0; border-top: 1px solid #222; }
         .services h2 { text-align: center; margin-bottom: 30px; }
         .service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
         .service-card { background: #141414; border: 1px solid #222; border-radius: 12px; padding: 20px; text-align: center; }
+        .service-card.live { border-color: #2a5a2a; }
         .service-card h4 { color: #fff; margin-bottom: 8px; }
         .service-card p { color: #888; font-size: 0.85em; margin-bottom: 15px; }
         .service-card .price { color: #00d2ff; font-size: 1.4em; font-weight: 700; margin-bottom: 12px; }
@@ -82,7 +88,7 @@
         
         <div class="product-grid">
             
-            <!-- Product 1 -->
+            <!-- Product 1: AI Agent Setup Guide -->
             <div class="product-card">
                 <span class="tag best-seller">BEST SELLER</span>
                 <h3>AI Agent Setup Guide for Small Business</h3>
@@ -94,10 +100,10 @@
                     <li>No coding required</li>
                 </ul>
                 <div class="price">$47 <span class="old">$97</span></div>
-                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+                <a href="https://github.com/WembassyCo/store/raw/main/downloads/ai-agent-setup-guide-small-business.pdf" class="btn btn-preview" target="_blank">Preview PDF</a>
             </div>
             
-            <!-- Product 2 -->
+            <!-- Product 2: Nonprofit Prompts -->
             <div class="product-card">
                 <span class="tag budget">BUDGET-FRIENDLY</span>
                 <h3>50 ChatGPT Prompts for Nonprofit Operations</h3>
@@ -109,10 +115,10 @@
                     <li>Marketing & communications</li>
                 </ul>
                 <div class="price">$27 <span class="old">$47</span></div>
-                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+                <a href="https://github.com/WembassyCo/store/raw/main/downloads/50-chatgpt-prompts-nonprofit-operations.pdf" class="btn btn-preview" target="_blank">Preview PDF</a>
             </div>
             
-            <!-- Product 3 -->
+            <!-- Product 3: Tech Stack Checklist -->
             <div class="product-card">
                 <span class="tag new">NEW</span>
                 <h3>Nonprofit Tech Stack Checklist 2026</h3>
@@ -124,10 +130,10 @@
                     <li>Donation page audit checklist</li>
                 </ul>
                 <div class="price">$37</div>
-                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+                <a href="https://github.com/WembassyCo/store/raw/main/downloads/nonprofit-tech-stack-checklist.pdf" class="btn btn-preview" target="_blank">Preview PDF</a>
             </div>
             
-            <!-- Product 4 -->
+            <!-- Product 4: SOP Kit -->
             <div class="product-card">
                 <span class="tag premium">PREMIUM</span>
                 <h3>Business Automation SOP Template Kit</h3>
@@ -139,12 +145,12 @@
                     <li>Quality checkpoints included</li>
                 </ul>
                 <div class="price">$67 <span class="old">$127</span></div>
-                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+                <a href="https://github.com/WembassyCo/store/raw/main/downloads/business-automation-sop-template-kit.pdf" class="btn btn-preview" target="_blank">Preview PDF</a>
             </div>
             
-            <!-- Product 5: Using EXISTING Stripe link -->
-            <div class="product-card" style="border-color: #4ade80;">
-                <span class="tag best-seller">LIVE — BUY NOW</span>
+            <!-- Product 5: ADA Toolkit — LIVE with Stripe -->
+            <div class="product-card" style="border-color: #2a5a2a;">
+                <span class="tag live">● LIVE — BUY NOW</span>
                 <h3>ADA Compliance Toolkit</h3>
                 <p class="desc">WCAG 2.1 AA accessibility audit template. Conduct professional audits, deliver client-ready reports, and offer audits as a service.</p>
                 <ul class="features">
@@ -154,10 +160,10 @@
                     <li>Pricing guide for selling audits</li>
                 </ul>
                 <div class="price">$49</div>
-                <a href="https://buy.stripe.com/cNi5kwf2dgSt7eD2ex1gs04" class="btn btn-primary" target="_blank">Buy Now — Instant Access</a>
+                <a href="https://buy.stripe.com/cNi5kwf2dgSt7eD2ex1gs04" class="btn btn-live" target="_blank">Buy Now — Instant Access</a>
             </div>
             
-            <!-- Product 6 -->
+            <!-- Product 6: AI Agent Config Library -->
             <div class="product-card">
                 <span class="tag new">NEW</span>
                 <h3>AI Agent Configuration Library</h3>
@@ -169,7 +175,7 @@
                     <li>Safety guardrails included</li>
                 </ul>
                 <div class="price">$57</div>
-                <a href="#" class="btn btn-primary">Coming Soon — Stripe Setup Pending</a>
+                <a href="https://github.com/WembassyCo/store/raw/main/downloads/ai-agent-configuration-library.pdf" class="btn btn-preview" target="_blank">Preview PDF</a>
             </div>
             
         </div>
@@ -180,28 +186,29 @@
 <div class="services">
     <div class="container">
         <h2>🔧 Subscription Services — Live Now</h2>
+        <p style="text-align:center; color:#888; margin-bottom:20px;">All services are active and ready to subscribe. Powered by Stripe.</p>
         
         <div class="service-grid">
             
-            <div class="service-card" style="border-color: #4ade80;">
+            <div class="service-card live">
                 <h4>Accessibility Monitoring</h4>
                 <p>Automated WCAG compliance monitoring for your website. Get alerts when new accessibility issues appear.</p>
                 <div class="price">$39/mo</div>
-                <a href="https://buy.stripe.com/4gMeV66vH31DeH55qJ1gs03" class="btn btn-primary" target="_blank">Subscribe Now</a>
+                <a href="https://buy.stripe.com/4gMeV66vH31DeH55qJ1gs03" class="btn btn-live" target="_blank">Subscribe Now</a>
             </div>
             
-            <div class="service-card" style="border-color: #4ade80;">
-                <h4>Website Uptime Monitoring — Standard</h4>
+            <div class="service-card live">
+                <h4>Uptime Monitoring — Standard</h4>
                 <p>5-minute checks, 1 site, email + SMS alerts. Know immediately when your site goes down.</p>
                 <div class="price">$19/mo</div>
-                <a href="https://buy.stripe.com/dRm7sE6vHdGhfL95qJ1gs08" class="btn btn-primary" target="_blank">Subscribe Now</a>
+                <a href="https://buy.stripe.com/dRm7sE6vHdGhfL95qJ1gs08" class="btn btn-live" target="_blank">Subscribe Now</a>
             </div>
             
-            <div class="service-card" style="border-color: #4ade80;">
-                <h4>Website Uptime Monitoring — Pro</h4>
+            <div class="service-card live">
+                <h4>Uptime Monitoring — Pro</h4>
                 <p>1-minute checks, 10 sites, custom status page, SSL monitoring. For agencies and multiple properties.</p>
                 <div class="price">$49/mo</div>
-                <a href="https://buy.stripe.com/aFa4gs6vH59LeH5bP71gs09" class="btn btn-primary" target="_blank">Subscribe Now</a>
+                <a href="https://buy.stripe.com/aFa4gs6vH59LeH5bP71gs09" class="btn btn-live" target="_blank">Subscribe Now</a>
             </div>
             
         </div>
@@ -246,6 +253,11 @@
         <p style="margin-top:10px;">Wembassy helps businesses and nonprofits leverage AI, automation, and technology to maximize impact.</p>
     </div>
 </footer>
+
+<!-- Analytics placeholder -->
+<script>
+// Google Analytics will be added here once tracking ID is configured
+</script>
 
 </body>
 </html>
