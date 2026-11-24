@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonprofit Website Accessibility Audit Guide (WCAG 2.1 AA) | Wembassy</title>
+    <meta name="description" content="How to conduct a WCAG 2.1 AA accessibility audit for your nonprofit website. Step-by-step checklist, tools, and report template. Avoid ADA lawsuits and serve all users.">
+    <meta name="keywords" content="nonprofit accessibility audit, WCAG 2.1 AA, ADA compliance website, nonprofit website audit, accessibility checklist, web accessibility guide">
+    <link rel="canonical" href="https://wembassyco.github.io/store/guide-nonprofit-accessibility-audit.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        h1 { font-size: 2em; margin: 40px 0 15px; color: #00d2ff; }
+        h2 { font-size: 1.4em; margin: 30px 0 10px; color: #fff; }
+        h3 { font-size: 1.1em; margin: 20px 0 8px; color: #3a7bd5; }
+        p { margin-bottom: 15px; color: #bbb; }
+        ul, ol { margin-bottom: 15px; padding-left: 25px; }
+        li { color: #bbb; margin-bottom: 5px; }
+        code { background: #1a1a2e; padding: 2px 8px; border-radius: 4px; color: #00d2ff; font-size: 0.9em; }
+        .cta { background: #141414; border: 1px solid #2a5a2a; border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center; }
+        .cta h3 { color: #4ade80; margin-bottom: 10px; }
+        .cta .btn { display: inline-block; background: #2a7a2a; color: #fff; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 10px; }
+        .nav { padding: 15px 0; border-bottom: 1px solid #222; }
+        .nav a { color: #00d2ff; text-decoration: none; }
+        footer { text-align: center; padding: 30px 0; border-top: 1px solid #222; color: #555; font-size: 0.85em; margin-top: 40px; }
+        footer a { color: #00d2ff; text-decoration: none; }
+        .stat { display: inline-block; background: #1a1a2e; border: 1px solid #2a2a4e; border-radius: 8px; padding: 10px 20px; margin: 5px; }
+        .stat .num { font-size: 1.5em; font-weight: 700; color: #00d2ff; }
+        .stat .label { font-size: 0.8em; color: #888; }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <div class="container">
+        <a href="https://wembassyco.github.io/store/">← Back to Wembassy Store</a>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Nonprofit Website Accessibility Audit Guide (WCAG 2.1 AA)</h1>
+    <p><em>Published: November 24, 2026 | By Wren, COO at Wembassy</em></p>
+
+    <div style="text-align:center; margin: 20px 0;">
+        <span class="stat"><span class="num">96.3%</span><span class="label">of nonprofit websites<br>have WCAG errors</span></span>
+        <span class="stat"><span class="num">$10K-$50K</span><span class="label">average ADA lawsuit<br>settlement</span></span>
+        <span class="stat"><span class="num">50</span><span class="label">WCAG 2.1 AA checkpoints<br>to check</span></span>
+    </div>
+
+    <p>If your nonprofit serves the public, your website needs to be accessible. Not just because it's the right thing to do — because it's the law. The Americans with Disabilities Act (ADA) applies to websites, and nonprofit organizations are not exempt.</p>
+
+    <h2>Why Accessibility Matters for Nonprofits</h2>
+    <ul>
+        <li><strong>Legal compliance:</strong> ADA Title III covers nonprofit websites. Lawsuits are increasing.</li>
+        <li><strong>Mission alignment:</strong> If you serve people with disabilities, your website should too.</li>
+        <li><strong>Grant requirements:</strong> Many federal grants require WCAG 2.1 AA compliance.</li>
+        <li><strong>SEO benefit:</strong> Accessible sites rank better in search engines.</li>
+        <li><strong>Broader reach:</strong> 1 in 4 US adults has a disability. That's your audience.</li>
+    </ul>
+
+    <h2>What WCAG 2.1 AA Requires</h2>
+    <p>WCAG 2.1 AA has four principles. Your website must be:</p>
+    <ol>
+        <li><strong>Perceivable</strong> — content can be seen, heard, and perceived by all users</li>
+        <li><strong>Operable</strong> — navigation and forms work with keyboard, screen readers, and other assistive tech</li>
+        <li><strong>Understandable</strong> — content is clear, predictable, and forgiving of mistakes</li>
+        <li><strong>Robust</strong> — works with current and future assistive technologies</li>
+    </ol>
+
+    <h2>The 50-Point Audit Checklist</h2>
+    <p>Our audit covers 50 checkpoints across 8 categories:</p>
+    <ul>
+        <li>Color contrast and visual presentation</li>
+        <li>Keyboard navigation and focus management</li>
+        <li>Screen reader compatibility (ARIA, labels, landmarks)</li>
+        <li>Form accessibility (labels, error messages, validation)</li>
+        <li>Media alternatives (alt text, captions, transcripts)</li>
+        <li>Page structure and headings</li>
+        <li>Mobile and responsive accessibility</li>
+        <li>Performance and timing considerations</li>
+    </ul>
+
+    <h2>Free Tools to Start With</h2>
+    <ul>
+        <li><strong>axe DevTools</strong> — browser extension, scans any page</li>
+        <li><strong>WAVE</strong> — webaim.org/wave, free online checker</li>
+        <li><strong>Lighthouse</strong> — built into Chrome DevTools</li>
+        <li><strong>NVDA</strong> — free screen reader for testing</li>
+        <li><strong>Keyboard-only testing</strong> — unplug your mouse and try to navigate</li>
+    </ul>
+
+    <h2>How to Run a Professional Audit</h2>
+    <ol>
+        <li><strong>Automated scan</strong> — run axe or WAVE on every page. This catches ~30% of issues.</li>
+        <li><strong>Manual keyboard test</strong> — navigate every page without a mouse. Can you reach all content?</li>
+        <li><strong>Screen reader test</strong> — use NVDA or VoiceOver to read through each page type.</li>
+        <li><strong>Color contrast check</strong> — verify all text meets 4.5:1 ratio (normal text) or 3:1 (large text).</li>
+        <li><strong>Document findings</strong> — create a report with severity levels and remediation recommendations.</li>
+    </ol>
+
+    <h2>Selling Accessibility Audits as a Service</h2>
+    <p>If you're a web developer or agency, accessibility audits are a high-value service. Typical pricing:</p>
+    <ul>
+        <li>Small website (1-10 pages): $500-$1,500</li>
+        <li>Medium website (10-50 pages): $1,500-$5,000</li>
+        <li>Large website (50+ pages): $5,000-$15,000</li>
+        <li>Monthly monitoring subscription: $39-$99/month</li>
+    </ul>
+
+    <div class="cta">
+        <h3>📋 Get the Complete Audit Toolkit</h3>
+        <p>The full <strong>ADA Compliance Toolkit</strong> includes:</p>
+        <ul style="text-align:left; max-width:400px; margin:10px auto;">
+            <li>50-point WCAG 2.1 AA checklist with pass/fail criteria</li>
+            <li>Automated testing commands for each checkpoint</li>
+            <li>Client-ready report template (Word + Google Docs)</li>
+            <li>Pricing guide for selling audits as a service</li>
+            <li>Email templates for pitching audits to clients</li>
+        </ul>
+        <a href="https://buy.stripe.com/cNi5kwf2dgSt7eD2ex1gs04" class="btn" target="_blank">Get Instant Access — $49</a>
+    </div>
+
+    <h2>Common Accessibility Issues on Nonprofit Websites</h2>
+    <ol>
+        <li><strong>Missing alt text</strong> on images — especially donor logos and event photos</li>
+        <li><strong>Low color contrast</strong> — gray text on light backgrounds is the #1 failure</li>
+        <li><strong>No keyboard navigation</strong> — dropdown menus and modals that trap keyboard users</li>
+        <li><strong>Unlabeled forms</strong> — "Name" as placeholder text instead of a proper label</li>
+        <li><strong>Missing headings</strong> — pages with no H1, or heading levels that skip (H1 → H4)</li>
+        <li><strong>No skip link</strong> — screen reader users must tab through entire nav on every page</li>
+    </ol>
+
+    <h2>How Long Does an Audit Take?</h2>
+    <p>For a typical 20-page nonprofit website:</p>
+    <ul>
+        <li>Automated scan: 15 minutes</li>
+        <li>Manual keyboard test: 1-2 hours</li>
+        <li>Screen reader test: 2-3 hours</li>
+        <li>Report writing: 1-2 hours</li>
+        <li><strong>Total: 4-8 hours</strong> (less with a template)</li>
+    </ul>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Wembassy · <a href="https://wembassyco.github.io/store/">Wembassy Store</a> · <a href="mailto:hello@wembassy.com">hello@wembassy.com</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
